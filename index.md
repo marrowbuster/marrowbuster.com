@@ -1,3 +1,3 @@
 # coming soon.
 
-[twitter](twitter.com/marrowbuster) | [furaffinity](furaffinity.net/user/marrowbuster) | [github](github.com/marrowbuster)
+[twitter](https://twitter.com/marrowbuster) | [furaffinity](https://furaffinity.net/user/marrowbuster) | [github](https://github.com/marrowbuster)

@@ -1,4 +1,6 @@
-:root {}
+:root {
+  --page-width: 1000px;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {}
@@ -40,7 +42,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 1em;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.2fr 1.5fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "aside header"
+    "aside main";
+  width: 100%;
+  max-width: var(--page-width);
+  height: 100%;
 }
 
 h1,
@@ -54,10 +69,15 @@ h2 {
   letter-spacing: 0.1em;
   color: #EEE;
   -webkit-text-stroke: 1px #222;
-  text-shadow: -2px 2px 5px rgba(204,204,204,1);
+  text-shadow: -2px 2px 5px rgba(204, 204, 204, 1);
   /*
    * TODO: -webkit-text-stroke @media feature query
   */
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+  }
+}

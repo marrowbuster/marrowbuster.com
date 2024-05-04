@@ -38,7 +38,11 @@
   }
 
   /*
-   * Trimmed paper borders.
+   * Trimmed page borders with modifiable parameters.
+   * Each corner trimmed corner starts and ends at horizontal or vertical offsets by var(--trim-size).
+   * The linear-gradient simulates a border at the trims' half-diagonals, computed as (sqrt(2) * a) / 2.
+   * The -1px are for formula corrections.
+   * "background-color" must come after "background".
    */
   .page-shape {
     --border-width: 1px;
@@ -47,11 +51,14 @@
 
     border: var(--border-width) solid var(--border-color);
 
-    clip-path: polygon(var(--trim-size) 0, 100% 0, 100% 100%, 0 100%, 0 var(--trim-size));
-    background: linear-gradient(135deg, var(--border-color) calc(0.707 * var(--trim-size) + var(--border-width)), #0000 0) border-box;
-    /* MUST come after! */
+    clip-path: polygon(var(--trim-size) 0, 100% 0, 100% calc(100% - var(--trim-size)), calc(100% - var(--trim-size)) 100%, 0 100%, 0 var(--trim-size));
+    background: linear-gradient(135deg, var(--border-color) calc(0.707106 * var(--trim-size) + var(--border-width)), #0000 0, var(--border-color) calc(100% - 0.707106 * var(--trim-size) + var(--border-width))) border-box;
+    background: linear-gradient(135deg,
+        #000000FF calc(0.707 * var(--trim-size) + var(--border-width) - 1px),
+        #FFFFFF00 calc(0.707 * var(--trim-size) + var(--border-width) - 1px),
+        #FFFFFF00 calc(100% - 0.707 * var(--trim-size) + var(--border-width) - 1px),
+        #000000FF calc(100% - 0.707 * var(--trim-size) + var(--border-width)));
     background-color: #FDFDFD;
-    border-bottom-right-radius: 30px;
   }
 
   .page-filter {

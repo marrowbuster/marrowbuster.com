@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Twitcher';
+  src: url(@/assets/fonts/twitcher.woff2) format('woff2');
+  font-display: swap;
+}
+
 :root {
   --page-width: 1000px;
 }
@@ -11,6 +17,10 @@
 *::after {
   box-sizing: border-box;
   user-select: none;
+}
+
+p {
+  user-select: text;
 }
 
 html,

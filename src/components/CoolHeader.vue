@@ -1,7 +1,5 @@
 <template>
-    <header>
-        <h1 id="title">marrowbuster</h1>
-    </header>
+    <h1>marrowbuster</h1>
 </template>
 
 <style scoped>
@@ -18,5 +16,12 @@
         letter-spacing: 0.1em;
         -webkit-text-stroke: 0.1px #222;
         margin: 0;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 992px) {
+        h1 {
+            font-size: 10vw;
+        }
     }
 </style>

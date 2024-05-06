@@ -6,35 +6,27 @@
 </script>
 
 <template>
-  <CoolHeader></CoolHeader>
-
   <aside>
-    <Logo width="100%"></Logo>
+    <Logo id="logo"></Logo>
     <NavigationBar></NavigationBar>
   </aside>
 
-  <main class="page-filter">
-    <div class="page-shape" id="main-page">
-      <RouterView />
-    </div>
-  </main>
+  <div>
+    <header>
+      <CoolHeader></CoolHeader>
+    </header>
+
+    <main class="page-filter">
+      <div class="page-shape" id="main-page">
+        <RouterView />
+      </div>
+    </main>
+  </div>
 </template>
 
 <style>
   main {
-    grid-area: main;
-  }
-
-  aside {
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  header {
-    grid-area: header;
+    flex: 1;
   }
 
   /*
@@ -70,17 +62,24 @@
     height: 100%;
   }
 
-  @media (max-width: 992px) {
-    header {
-      text-align: center;
-    }
+  #logo {
+    max-height: 211px;
+    max-width: 211px;
+  }
 
-    #title {
-      font-size: 10vw;
-    }
-
+  @media screen and (max-width: 992px) {
     aside {
-      flex-direction: row;
+      flex-direction: row !important;
+    }
+
+    main,
+    aside {
+      font-size: 0.8em;
+    }
+
+    #logo {
+      max-height: 160px;
+      max-width: 160px;
     }
   }
 </style>

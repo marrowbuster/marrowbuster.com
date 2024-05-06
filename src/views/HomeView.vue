@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <h2>Log:</h2>
   <h3>2024 • 04 • 15</h3>

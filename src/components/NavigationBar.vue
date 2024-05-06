@@ -40,16 +40,15 @@
         --trim-size: 25px;
         width: 100%;
         padding: 1.1em;
-        min-height: 500px;
+        height: 100%;
+        max-height: 400px;
     }
 
     span {
         font-weight: bold;
     }
 
-    @media (max-width: 992px) {
-        nav {
-            min-height: fit-content;
-        }
+    .page-filter {
+        flex: 1;
     }
 </style>

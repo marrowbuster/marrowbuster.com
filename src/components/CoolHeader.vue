@@ -12,7 +12,7 @@
             -4px 11px 0 #444, -4px 12px 0 #444,
             -4px 10px 30px rgba(0, 0, 0, 0.5);
         color: #EEE;
-        font-size: 84px;
+        font-size: 86px;
         letter-spacing: 0.1em;
         -webkit-text-stroke: 0.1px #222;
         margin: 0;

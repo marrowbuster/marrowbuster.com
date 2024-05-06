@@ -11,7 +11,7 @@
     <NavigationBar></NavigationBar>
   </aside>
 
-  <div>
+  <div style="flex: 1">
     <header>
       <CoolHeader></CoolHeader>
     </header>
